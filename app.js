@@ -5,6 +5,10 @@ var util = require('util');
 var eventConfig = require('./config').events;
 
 function Greetr() {
+    // Adding a superconstructer for complete inheritance
+    // We do this because we want Greetr to be an event emitter 
+    //  and so one must be called and created whenever a Greetr is
+    EventEmitter.call(this);
     this.greeting = 'Hello World';
 }
 
