@@ -1,0 +1,204 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'express-generator' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'express-generator', null ]
+7 verbose cache add spec express-generator
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'express-generator',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'express-generator',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed express-generator@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for express-generator
+11 info addNameTag [ 'express-generator', 'latest' ]
+12 silly mapToRegistry name express-generator
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'express-generator',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'express-generator',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/express-generator
+17 verbose addNameTag registry:https://registry.npmjs.org/express-generator not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/express-generator
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 1:26:57 AM
+21 verbose request id 5d3e5611596687d1
+22 http request GET https://registry.npmjs.org/express-generator
+23 http 200 https://registry.npmjs.org/express-generator
+24 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 verbose headers   etag: '"8A1N6JIYFXC8B1D30NIZQQ2EO"',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '4692',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Mon, 25 Jul 2016 03:57:02 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '139',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-jfk1024-JFK',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '1',
+24 verbose headers   'x-timer': 'S1469419022.135054,VS0,VE0',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 200,
+25 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly get     etag: '"8A1N6JIYFXC8B1D30NIZQQ2EO"',
+25 silly get     'content-type': 'application/json',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '4692',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Mon, 25 Jul 2016 03:57:02 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '139',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-jfk1024-JFK',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '1',
+25 silly get     'x-timer': 'S1469419022.135054,VS0,VE0',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose get saving express-generator to /Users/robert/.npm/registry.npmjs.org/express-generator/.cache.json
+27 verbose correctMkdir /Users/robert/.npm correctMkdir not in flight; initializing
+28 verbose makeDirectory /Users/robert/.npm creation not in flight; initializing
+29 silly makeDirectory /Users/robert/.npm uid: 501 gid: 20
+30 silly addNameTag next cb for express-generator with tag latest
+31 silly addNamed express-generator@4.13.4
+32 verbose addNamed "4.13.4" is a plain semver version for express-generator
+33 silly mapToRegistry name express-generator
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry data Result {
+36 silly mapToRegistry   raw: 'express-generator',
+36 silly mapToRegistry   scope: null,
+36 silly mapToRegistry   name: 'express-generator',
+36 silly mapToRegistry   rawSpec: '',
+36 silly mapToRegistry   spec: 'latest',
+36 silly mapToRegistry   type: 'tag' }
+37 silly mapToRegistry uri https://registry.npmjs.org/express-generator
+38 verbose addRemoteTarball https://registry.npmjs.org/express-generator/-/express-generator-4.13.4.tgz not in flight; adding
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/express-generator/-/express-generator-4.13.4.tgz',
+39 verbose addRemoteTarball   '3abec2e5e7b548820075024954ff7fa6a447e5eb' ]
+40 info retry fetch attempt 1 at 1:27:02 AM
+41 info attempt registry request try #1 at 1:27:02 AM
+42 http fetch GET https://registry.npmjs.org/express-generator/-/express-generator-4.13.4.tgz
+43 http fetch 200 https://registry.npmjs.org/express-generator/-/express-generator-4.13.4.tgz
+44 silly fetchAndShaCheck shasum 3abec2e5e7b548820075024954ff7fa6a447e5eb
+45 verbose addTmpTarball /var/folders/2w/g4_7dl5d3fddmrvsz41jwgn80000gn/T/npm-4026-714456b1/registry.npmjs.org/express-generator/-/express-generator-4.13.4.tgz not in flight; adding
+46 verbose addTmpTarball already have metadata; skipping unpack for express-generator@4.13.4
+47 verbose correctMkdir /Users/robert/.npm correctMkdir not in flight; initializing
+48 silly cache afterAdd express-generator@4.13.4
+49 verbose afterAdd /Users/robert/.npm/express-generator/4.13.4/package/package.json not in flight; writing
+50 verbose correctMkdir /Users/robert/.npm correctMkdir not in flight; initializing
+51 verbose afterAdd /Users/robert/.npm/express-generator/4.13.4/package/package.json written
+52 silly install resolved [ { name: 'express-generator',
+52 silly install resolved     description: 'Express\' application generator',
+52 silly install resolved     version: '4.13.4',
+52 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+52 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+52 silly install resolved     keywords:
+52 silly install resolved      [ 'express',
+52 silly install resolved        'framework',
+52 silly install resolved        'sinatra',
+52 silly install resolved        'web',
+52 silly install resolved        'rest',
+52 silly install resolved        'restful',
+52 silly install resolved        'router',
+52 silly install resolved        'app',
+52 silly install resolved        'api' ],
+52 silly install resolved     repository: { type: 'git', url: 'https://github.com/expressjs/generator' },
+52 silly install resolved     license: 'MIT',
+52 silly install resolved     dependencies: { commander: '2.7.1', mkdirp: '0.5.1', 'sorted-object': '2.0.0' },
+52 silly install resolved     main: 'bin/express',
+52 silly install resolved     preferGlobal: true,
+52 silly install resolved     bin: { express: './bin/express' },
+52 silly install resolved     devDependencies: { mocha: '2.4.5', rimraf: '2.5.2', supertest: '1.2.0' },
+52 silly install resolved     engines: { node: '>= 0.10' },
+52 silly install resolved     files: [ 'LICENSE', 'bin/', 'templates/' ],
+52 silly install resolved     scripts:
+52 silly install resolved      { test: 'mocha --reporter spec --bail --check-leaks test/',
+52 silly install resolved        'test-ci': 'mocha --reporter spec --check-leaks test/' },
+52 silly install resolved     gitHead: 'f7b1543a297425f541f0b18c3312105c403a660f',
+52 silly install resolved     bugs: { url: 'https://github.com/expressjs/generator/issues' },
+52 silly install resolved     homepage: 'https://github.com/expressjs/generator',
+52 silly install resolved     _id: 'express-generator@4.13.4',
+52 silly install resolved     _shasum: '3abec2e5e7b548820075024954ff7fa6a447e5eb',
+52 silly install resolved     _from: 'express-generator@latest',
+52 silly install resolved     _npmVersion: '1.4.28',
+52 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+52 silly install resolved     maintainers: [ [Object] ],
+52 silly install resolved     dist:
+52 silly install resolved      { shasum: '3abec2e5e7b548820075024954ff7fa6a447e5eb',
+52 silly install resolved        tarball: 'https://registry.npmjs.org/express-generator/-/express-generator-4.13.4.tgz' },
+52 silly install resolved     _npmOperationalInternal:
+52 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+52 silly install resolved        tmp: 'tmp/express-generator-4.13.4.tgz_1466223574112_0.6206904440186918' },
+52 silly install resolved     directories: {},
+52 silly install resolved     _resolved: 'https://registry.npmjs.org/express-generator/-/express-generator-4.13.4.tgz' } ]
+53 info install express-generator@4.13.4 into /usr/local/lib
+54 info installOne express-generator@4.13.4
+55 verbose installOne of express-generator to /usr/local/lib not in flight; installing
+56 verbose correctMkdir /Users/robert/.npm/_locks correctMkdir not in flight; initializing
+57 verbose makeDirectory /Users/robert/.npm/_locks creation not in flight; initializing
+58 silly makeDirectory /Users/robert/.npm/_locks uid: 501 gid: 20
+59 verbose lock using /Users/robert/.npm/_locks/express-generator-d3cc1706f4adef09.lock for /usr/local/lib/node_modules/express-generator
+60 silly install write writing express-generator 4.13.4 to /usr/local/lib/node_modules/express-generator
+61 verbose unbuild lib/node_modules/express-generator
+62 silly gentlyRm /usr/local/lib/node_modules/express-generator is being purged from base /usr/local
+63 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/express-generator
+64 verbose tar unpack /Users/robert/.npm/express-generator/4.13.4/package.tgz
+65 verbose tar unpacking to /usr/local/lib/node_modules/express-generator
+66 silly gentlyRm /usr/local/lib/node_modules/express-generator is being purged
+67 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/express-generator
+68 silly gunzTarPerm modes [ '755', '644' ]
+69 error tar.unpack untar error /Users/robert/.npm/express-generator/4.13.4/package.tgz
+70 verbose unlock done using /Users/robert/.npm/_locks/express-generator-d3cc1706f4adef09.lock for /usr/local/lib/node_modules/express-generator
+71 verbose fstream_path /usr/local/lib/node_modules/express-generator
+72 verbose fstream_type Directory
+73 verbose fstream_class DirWriter
+74 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/express-generator'
+74 verbose stack     at Error (native)
+75 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+75 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+75 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+76 verbose cwd /Users/robert/Github/NJS_Project1
+77 error Darwin 15.5.0
+78 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "express-generator"
+79 error node v4.4.7
+80 error npm  v2.15.8
+81 error path /usr/local/lib/node_modules/express-generator
+82 error code EACCES
+83 error errno -13
+84 error syscall mkdir
+85 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/express-generator'
+85 error     at Error (native)
+85 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/express-generator']
+85 error   errno: -13,
+85 error   code: 'EACCES',
+85 error   syscall: 'mkdir',
+85 error   path: '/usr/local/lib/node_modules/express-generator',
+85 error   fstream_type: 'Directory',
+85 error   fstream_path: '/usr/local/lib/node_modules/express-generator',
+85 error   fstream_class: 'DirWriter',
+85 error   fstream_stack:
+85 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+85 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+85 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+86 error Please try running this command again as root/Administrator.
+87 verbose exit [ -13, true ]
+88 verbose unbuild lib/node_modules/express-generator
+89 silly gentlyRm /usr/local/lib/node_modules/express-generator is being purged from base /usr/local
+90 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/express-generator

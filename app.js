@@ -10,7 +10,14 @@ var greet2 = fs.readFile(__dirname + '/greet.txt', 'utf8', function(err, data) {
     console.log(data);
 });
 
+// This appears before greet2's callback because it was asyncronous
 console.log('Done!');
+
+var readable = fs.createReadStream(__dirname + '/greet.txt', { encoding: 'utf8' });
+
+readable.on('data', function(chunk) {
+    console.log(chunk);
+});
 /*
 
 // Inheriting from the event emitter...
