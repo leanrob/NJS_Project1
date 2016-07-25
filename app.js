@@ -1,3 +1,18 @@
+var fs = require('fs');
+
+// yncronous file read and this may not be the best.
+var greet = fs.readFileSync(__dirname + '/greet.txt', 'utf8');
+
+console.log(greet);
+
+// The last function is a callback, using Error First Callbacks
+var greet2 = fs.readFile(__dirname + '/greet.txt', 'utf8', function(err, data) {
+    console.log(data);
+});
+
+console.log('Done!');
+/*
+
 // Inheriting from the event emitter...
 
 var EventEmitter = require('events');
@@ -44,6 +59,7 @@ var greet2 = `hello ${ name }`;
 console.log(greet);
 console.log(greet2);
 
+*/
 
 /* Previous code
 
