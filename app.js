@@ -1,4 +1,26 @@
+// Pipes and readable wrtiable
+
 var fs = require('fs');
+var zlib = require('zlib');
+
+var readable = fs.createReadStream(__dirname + '/greet.txt');
+
+var writable = fs.createWriteStream(__dirname + '/greetcopy.txt');
+
+var compressed = fs.createWriteStream(__dirname + '/greet.txt.gz');
+
+// Creating a compressed file as a stram and can pipe its output as well...
+var gzip = zlib.createGzip();
+
+// Simple way to send achunk of data from one file to anther through a pipe
+readable.pipe(writable);
+
+// on every chunk we will write to gzip and then write to compressed
+//  all of this is done with method chaining
+readable.pipe(gzip).pipe(compressed);
+
+
+/*
 
 // yncronous file read and this may not be the best.
 var greet = fs.readFileSync(__dirname + '/greet.txt', 'utf8');
@@ -13,11 +35,14 @@ var greet2 = fs.readFile(__dirname + '/greet.txt', 'utf8', function(err, data) {
 // This appears before greet2's callback because it was asyncronous
 console.log('Done!');
 
+// encoding added as an object in this data stream
 var readable = fs.createReadStream(__dirname + '/greet.txt', { encoding: 'utf8' });
 
 readable.on('data', function(chunk) {
     console.log(chunk);
 });
+
+*/
 /*
 
 // Inheriting from the event emitter...
