@@ -7,6 +7,27 @@ var fs = require('fs');
 // listening for a request on 1337 and do this nde code in the begining.
 http.createServer(function(req, res) {
     // mimetype set to send htmls data
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+
+    var obj = {
+        firstname: 'John',
+        lastname: 'Deo'
+    };
+    res.end(JSON.stringify(obj));
+
+    // sending the variable which is the contents of index.html
+    //fs.createReadStream(__dirname + '/index.html').pipe(res);
+
+
+}).listen(1337, '127.0.0.1');
+
+// How to run this:
+// run it in terminal, then make a browser request to 'localhost:1337'
+
+/*
+// listening for a request on 1337 and do this nde code in the begining.
+http.createServer(function(req, res) {
+    // mimetype set to send htmls data
     res.writeHead(200, { 'Content-Type': 'text/html' });
 
     // sending the variable which is the contents of index.html
@@ -23,3 +44,4 @@ http.createServer(function(req, res) {
 
 // How to run this:
 // run it in terminal, then make a browser request to 'localhost:1337'
+*/
