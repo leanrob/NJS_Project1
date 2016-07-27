@@ -6,11 +6,23 @@ var app = express();
 // Environment variable that we can use in the code
 var port = process.env.PORT || 3000;
 
-// Sending HTML data using express' get and send, only on '/'
-app.get('/', function(req, res) {
-    res.send('<html><head></head><body><h1>Hello Guys!!!</h1></body></html>');
+// Whenever we access domain/assets then we will go find and make available the public folder
+app.use('/assets', express.static(__dirname + '/public'));
+
+// Console.log's the name of any url loaded as long as it starts with a '/'
+app.use('/', function(req, res, next) {
+    console.log('Request Url: ' + req.url);
+    // Run the next middleware
+    next();
 });
 
+// Sending HTML data using express' get and send, only on '/'
+// Sending a static file when a request happens
+app.get('/', function(req, res) {
+    res.send('<html><head><link href=assets/style.css type=text/css rel=stylesheet /></head><body><h1>Hello Guys!!!</h1></body></html>');
+});
+
+// dealing with a route and using an id variable in the url that can be accessed in code
 app.get('/person/:id', function(req, res) {
     res.send('<html><head></head><body><h1>Person: ' + req.params.id + '</h1></body></html>');
 });
