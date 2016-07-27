@@ -1,0 +1,23 @@
+{
+  "name": "njs-project1",
+  "version": "1.0.0",
+  "description": "This is a test app usine NodeJS Express etc.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://leanrob@github.com/leanrob/NJS_Project1.git"
+  },
+  "author": "Robert Byrne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leanrob/NJS_Project1/issues"
+  },
+  "homepage": "https://github.com/leanrob/NJS_Project1#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "moment": "^2.14.1"
+  }
+}
