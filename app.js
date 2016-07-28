@@ -1,10 +1,15 @@
 // Much neater way to do what we did before, done this time with expressjs
 
 var express = require('express');
+var bodyParser = require( 'body-parser' );
 var app = express();
 
 // Environment variable that we can use in the code
 var port = process.env.PORT || 3000;
+
+// Used on line 42
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var jsonParser = bodyParser.json();
 
 // Whenever we access domain/assets then we will go find and make available the public folder
 app.use('/assets', express.static(__dirname + '/public'));
@@ -29,9 +34,26 @@ app.get('/', function(req, res) {
 });
 
 // dealing with a route and using an id variable in the url that can be accessed in code
+// Qstr rep.query will be empty is nothing is passed to it.
 app.get('/person/:id', function(req, res) {
-    res.render('person', { ID: req.params.id });
+    res.render('person', { ID: req.params.id, Qstr: req.query.qstr });
 });
+// Add a querystring by putting the following in the browser bar, makes Qstr = 123...
+// http://localhost:3000/person/1?qstr=123
+
+// Grab information using a form post in your html, or in this case ejs files
+// See index.js for reference
+app.post('/person', urlencodedParser, function(req, res) {
+    res.send('Thank you!');
+    console.log(req.body.firstname);
+    console.log(req.body.lastname);    
+});
+
+app.post('/personjson', jsonParser, function() {
+    res.send('Thanks for the json, nom nom nom...');
+    console.log(req.body.firstname);
+    console.log(req.body.lastname);
+})
 
 app.get('/api', function(req, res) {
     res.json({ firstname: 'Rob', lastname: 'Byrne'});
