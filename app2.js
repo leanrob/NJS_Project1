@@ -1,4 +1,11 @@
 // Pipes and readable wrtiable
+/*
+Readable and Writable Streams as well as Piping in NodeJS
+- Creating 3 streams, one readable and 2 writable
+- use zlib module to create a Gzip
+- pipe the readable stream to both writable streams
+- make sure to compress the
+ */
 
 var fs = require('fs');
 var zlib = require('zlib');
@@ -9,10 +16,10 @@ var writable = fs.createWriteStream(__dirname + '/greetcopy.txt');
 
 var compressed = fs.createWriteStream(__dirname + '/greet.txt.gz');
 
-// Creating a compressed file as a stram and can pipe its output as well...
+// Creating a compressed file as a stream and can pipe its output as well...
 var gzip = zlib.createGzip();
 
-// Simple way to send achunk of data from one file to anther through a pipe
+// Simple way to send a chunk of data from one file to anther through a pipe
 readable.pipe(writable);
 
 // on every chunk we will write to gzip and then write to compressed
@@ -21,8 +28,14 @@ readable.pipe(gzip).pipe(compressed);
 
 
 /*
+Asynchronous file reading in NodeJS and using it to read from a .txt file
+- requires fs module to createReadStream
+- synchronous file reading with fs.readFileSync
+- asynchronous file reading with fs.readFile
+*/
+/*
 
-// yncronous file read and this may not be the best.
+// synchronous file read and this may not be the best.
 var greet = fs.readFileSync(__dirname + '/greet.txt', 'utf8');
 
 console.log(greet);
@@ -32,7 +45,7 @@ var greet2 = fs.readFile(__dirname + '/greet.txt', 'utf8', function(err, data) {
     console.log(data);
 });
 
-// This appears before greet2's callback because it was asyncronous
+// This appears before greet2's callback because it was asynchronous
 console.log('Done!');
 
 // encoding added as an object in this data stream
@@ -41,6 +54,11 @@ var readable = fs.createReadStream(__dirname + '/greet.txt', { encoding: 'utf8' 
 readable.on('data', function(chunk) {
     console.log(chunk);
 });
+
+*/
+
+
+/*
 
 */
 /*
@@ -93,8 +111,14 @@ console.log(greet2);
 
 */
 
-/* Previous code
 
+/*
+First use of the event emitter.
+- setup the event emitter and requires
+- Add 2 listeners titled GREET to our event emitter
+- Then, emit the GREET events
+*/
+/*
 var Emitter = require('events');
 
 var eventConfig = require('./config').events;
@@ -113,5 +137,4 @@ emtr.on(eventConfig.GREET, function() {
 
 console.log('Hello!');
 emtr.emit(eventConfig.GREET);
-
 */

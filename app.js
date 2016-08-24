@@ -61,6 +61,10 @@ app.get('/api', function(req, res) {
 
 app.listen(port);
 
+
+/*
+
+*/
 /*
 // This is the basic setup of a node server, 
 //  and is made up of all the things learned up until now.
@@ -69,6 +73,7 @@ var http = require('http');
 var fs = require('fs');
 
 // listening for a request on 1337 and do this nde code in the begining.
+
 http.createServer(function(req, res) {
     // mimetype set to send htmls data
     // Transfering some JSON data through HTTP with the following code
@@ -97,8 +102,12 @@ http.createServer(function(req, res) {
 // How to run this:
 // run it in terminal, then make a browser request to 'localhost:1337'
 */
+
 /*
-// listening for a request on 1337 and do this nde code in the begining.
+Creating a server in NodeJS on 1337 and 127.0.0.1
+ */
+/*
+// listening for a request on 1337
 http.createServer(function(req, res) {
     // mimetype set to send htmls data
     res.writeHead(200, { 'Content-Type': 'text/html' });
